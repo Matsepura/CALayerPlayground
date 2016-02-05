@@ -10,9 +10,14 @@ import UIKit
 
 class MyImageTableViewCell: BaseMessageTableViewCell {
     
-    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 0)
+    // MARK: Property
+    
+    var shadowLayer: CAShapeLayer!
+
+    let bubble = UIImage(named: "rightBubbleBackground")
+    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
     let mask = CALayer()
-    var testImage: UIImage = UIImage()
+    
     // MARK: Setup
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,13 +37,14 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
     }
     
     private func setupMessageLayer() {
-        
+
         self.messageLayer.anchorPoint = CGPoint(x: 1, y: 0.5)
         self.messageLayer.contentsGravity = kCAGravityResizeAspectFill
         self.messageLayer.backgroundColor = UIColor.lightGrayColor().CGColor
         self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
         if let bubble = UIImage(named: "rightBubbleBackground") {
+            print("2")
             self.mask.contentsScale = bubble.scale
             self.mask.contents = bubble.CGImage
             //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
@@ -47,7 +53,6 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
                 width: 1/bubble.size.width,
                 height: 1/bubble.size.height);
         }
-        
         self.messageLayer.contents = UIImage(named: "cat")?.CGImage
         self.messageLayer.mask = self.mask
     }
@@ -57,6 +62,25 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
         self.mask.frame = self.messageLayer.bounds
+        
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+//            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).CGPath
+            shadowLayer.path = UIBezierPath(rect: self.messageLayer.frame).CGPath
+            shadowLayer.fillColor = UIColor.darkGrayColor().CGColor
+            
+            shadowLayer.shadowColor = UIColor.redColor().CGColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 0, height: 3)
+            shadowLayer.shadowOpacity = 0.8
+            shadowLayer.shadowRadius = 5
+            print("1")
+            shadowLayer.contentsScale = (bubble?.scale)!
+            
+            layer.insertSublayer(shadowLayer, atIndex: 0)
+            //layer.insertSublayer(shadowLayer, below: nil) // also works
+        }
+
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {

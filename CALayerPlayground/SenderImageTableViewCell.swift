@@ -10,6 +10,10 @@ import UIKit
 
 class SenderImageTableViewCell: BaseMessageTableViewCell {
 
+    // MARK: Property
+    
+    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 0)
+    let mask = CALayer()
     
     // MARK: Setup
 
@@ -34,15 +38,28 @@ class SenderImageTableViewCell: BaseMessageTableViewCell {
         self.messageLayer.anchorPoint = CGPoint(x: 0, y: 0.5)
         self.messageLayer.contentsGravity = kCAGravityResizeAspectFill
         self.messageLayer.backgroundColor = UIColor.darkGrayColor().CGColor
-        self.messageLayer.cornerRadius = 20
         self.messageLayer.frame.size = calculateSizeOfBubbleImage()
+        
+        if let bubble = UIImage(named: "leftBubbleBackground") {
+            
+            self.mask.contentsScale = bubble.scale
+            self.mask.contents = bubble.CGImage
+            
+            self.mask.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
+                y: bubbleRightCapInsets.top/bubble.size.width ,
+                width: 1/bubble.size.width,
+                height: 1/bubble.size.height)
+        }
         self.messageLayer.contents = UIImage(named: "raketa")?.CGImage
+        self.messageLayer.mask = self.mask
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: 10, y: self.bounds.height / 2)
+        self.mask.frame = self.messageLayer.bounds
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {

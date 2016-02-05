@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "rightBubbleBackground.png"
+      "filename" : "leftBubbleBackground1.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "rightBubbleBackground@2x.png",
+      "filename" : "leftBubbleBackground1@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "rightBubbleBackground@3x.png"
+      "filename" : "leftBubbleBackground1@3x.png"
     }
   ],
   "info" : {
