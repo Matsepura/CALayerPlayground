@@ -10,12 +10,11 @@ import UIKit
 
 class MyImageTableViewCell: BaseMessageTableViewCell {
     
-    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsetsMake(15, 20, 15, 20)
+    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 0)
     let mask = CALayer()
-    let testImageView: UIImageView = UIImageView()
     var testImage: UIImage = UIImage()
     // MARK: Setup
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -37,35 +36,27 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         self.messageLayer.anchorPoint = CGPoint(x: 1, y: 0.5)
         self.messageLayer.contentsGravity = kCAGravityResizeAspectFill
         self.messageLayer.backgroundColor = UIColor.lightGrayColor().CGColor
-        self.messageLayer.cornerRadius = 20
         self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
-        self.testImageView.image = UIImage(named: "cat")
-        self.testImage = UIImage(named: "rightBubbleBackground")!.resizableImageWithCapInsets(bubbleRightCapInsets, resizingMode:.Stretch)
+        if let bubble = UIImage(named: "rightBubbleBackground") {
+            self.mask.contentsScale = bubble.scale
+            self.mask.contents = bubble.CGImage
+            //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
+            self.mask.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
+                y: bubbleRightCapInsets.top/bubble.size.height,
+                width: 1/bubble.size.width,
+                height: 1/bubble.size.height);
+        }
         
-        
-        self.testImageView.frame = self.messageLayer.frame
-        
-//        self.textMessage.contents = UIImage(named: "cat")?.resizableImageWithCapInsets(bubbleRightCapInsets, resizingMode:.Stretch).CGImage
-        self.mask.contents = testImage.CGImage
-//
-//      
-        mask.frame = self.testImageView.layer.frame
-        mask.contentsCenter =
-            CGRectMake(bubbleRightCapInsets.left/testImage.size.width,
-                bubbleRightCapInsets.top/testImage.size.height,
-                1.0/testImage.size.width,
-                1.0/testImage.size.height)
-        self.testImageView.layer.mask = mask
-        self.testImageView.layer.masksToBounds = true
-        
-        self.messageLayer.contents = testImageView.image?.CGImage
+        self.messageLayer.contents = UIImage(named: "cat")?.CGImage
+        self.messageLayer.mask = self.mask
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
+        self.mask.frame = self.messageLayer.bounds
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {
