@@ -59,7 +59,7 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
-        self.mask.frame = self.messageLayer.bounds
+//        self.mask.frame = self.messageLayer.bounds
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {
