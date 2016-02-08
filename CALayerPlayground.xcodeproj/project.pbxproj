@@ -17,6 +17,7 @@
 		452D17441C638230001C4C32 /* BaseMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17431C638230001C4C32 /* BaseMessageTableViewCell.swift */; };
 		452D17461C6387E2001C4C32 /* MyImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17451C6387E2001C4C32 /* MyImageTableViewCell.swift */; };
 		452D17481C638804001C4C32 /* SenderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */; };
+		45FD59151C6874E60099F9F9 /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD59141C6874E60099F9F9 /* MessageLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		452D17431C638230001C4C32 /* BaseMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageTableViewCell.swift; sourceTree = "<group>"; };
 		452D17451C6387E2001C4C32 /* MyImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageTableViewCell.swift; sourceTree = "<group>"; };
 		452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderImageTableViewCell.swift; sourceTree = "<group>"; };
+		45FD59141C6874E60099F9F9 /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				452D17451C6387E2001C4C32 /* MyImageTableViewCell.swift */,
 				452D173D1C636112001C4C32 /* SenderTableViewCell.swift */,
 				452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */,
+				45FD59141C6874E60099F9F9 /* MessageLayer.swift */,
 				452D172B1C634BDD001C4C32 /* Main.storyboard */,
 				452D172E1C634BDD001C4C32 /* Assets.xcassets */,
 				452D17301C634BDD001C4C32 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				452D17441C638230001C4C32 /* BaseMessageTableViewCell.swift in Sources */,
 				452D17281C634BDD001C4C32 /* AppDelegate.swift in Sources */,
 				452D173C1C636107001C4C32 /* MyTableViewCell.swift in Sources */,
+				45FD59151C6874E60099F9F9 /* MessageLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
