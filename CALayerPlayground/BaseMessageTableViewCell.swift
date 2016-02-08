@@ -12,7 +12,6 @@ class BaseMessageTableViewCell: UITableViewCell {
     
     // MARK: Property
 
-//    private(set) var messageLayer: CALayer!
     private(set) var messageLayer: MessageLayer!
     private(set) var textLayer: TextMessageLayer!
     

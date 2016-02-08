@@ -14,7 +14,7 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
 
     let bubble = UIImage(named: "rightBubbleBackground")
     let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
-    let mask = CALayer()
+    let mask = MessageLayer()
     
     // MARK: Setup
     
@@ -50,8 +50,15 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
                 width: 1/bubble.size.width,
                 height: 1/bubble.size.height);
         }
+        self.messageLayer.masksToBounds = false
         self.messageLayer.contents = UIImage(named: "cat")?.CGImage
+        //// тени нету, картинка тянется по маске
         self.messageLayer.mask = self.mask
+        //// картинка квадратная, тень есть
+//        self.messageLayer.contentLayer.mask = self.mask
+//        self.messageLayer.contentLayer.mask = self.messageLayer.mask
+        
+        self.messageLayer.contentLayer.masksToBounds = true
     }
     
     override func layoutSubviews() {

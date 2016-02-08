@@ -42,11 +42,11 @@ class MessageLayer: CALayer {
     private func commonInit() {
         self.contentLayer = CALayer()
         self.addSublayer(self.contentLayer)
-        
-//                self.shadowColor = UIColor.redColor().CGColor
-//                self.shadowRadius = 5
-//                self.shadowOffset = CGSizeMake(2, 2)
-//                self.shadowOpacity = 1
+
+        self.shadowColor = UIColor.redColor().CGColor
+        self.shadowRadius = 5
+        self.shadowOffset = CGSizeMake(2, 2)
+        self.shadowOpacity = 1
         //test
         //        self.maskLayer = CALayer()
         //

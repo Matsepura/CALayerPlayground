@@ -13,6 +13,7 @@ class SenderTableViewCell: BaseMessageTableViewCell {
     let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 0)
     let mask = CALayer()
     
+    
     // MARK: Setup
 
     required init?(coder aDecoder: NSCoder) {
@@ -33,10 +34,10 @@ class SenderTableViewCell: BaseMessageTableViewCell {
     
     private func setupMessagesLayer() {
         self.messageLayer.anchorPoint = CGPoint(x: 0, y: 0.5)
-        
-        self.messageLayer.backgroundColor = UIColor.darkGrayColor().CGColor
-//        self.messageLayer.cornerRadius = 20
-        self.messageLayer.frame.size = calculateSizeOfBubleImage()
+        self.messageLayer.backgroundColor = UIColor.greenColor().CGColor
+        self.messageLayer.frame.size = CGSize(width: self.calculateSizeOfBubbleImage().width - 20, height: self.calculateSizeOfBubbleImage().height - 10)
+
+        self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
         if let bubble = UIImage(named: "leftBubbleBackground") {
             
@@ -56,11 +57,14 @@ class SenderTableViewCell: BaseMessageTableViewCell {
         
         self.messageLayer.position = CGPoint(x: 10, y: self.bounds.height / 2)
         self.mask.frame = self.messageLayer.bounds
+        self.textLayer.frame = CGRect(x: self.messageLayer.frame.origin.x + 14, y: self.messageLayer.frame.origin.y + 4, width: self.messageLayer.frame.width, height: self.messageLayer.frame.height)
     }
     
-    private func calculateSizeOfBubleImage() -> CGSize{
+    private func calculateSizeOfBubbleImage() -> CGSize{
         var size = CGSize()
         size = CGSizeMake(120, 40)
+        let sizeUp = TextMessageLayer()
+        size = sizeUp.setupSize()
         return size
     }
 }

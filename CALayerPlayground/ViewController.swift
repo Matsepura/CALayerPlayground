@@ -64,7 +64,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var height: CGFloat = 50
+        
+        let sizeUp = TextMessageLayer()
+        var height = sizeUp.setupSize().height + 10
+
+//        var height: CGFloat = 50
 
         // увеличиваем размер ячейки под картинку
         if indexPath.row == 7 {
@@ -72,10 +76,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 2 {
             height = 130
         }
-        
         return height
     }
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
