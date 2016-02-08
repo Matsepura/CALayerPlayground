@@ -16,6 +16,7 @@ class MessageLayer: CALayer {
     //test
     //    private(set) var maskLayer: CALayer!
     //    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
+        var necessarySize = CGSize()
     //test
     
     // MARK: - Setup
@@ -42,10 +43,10 @@ class MessageLayer: CALayer {
         self.contentLayer = CALayer()
         self.addSublayer(self.contentLayer)
         
-        //        self.shadowColor = UIColor.lightGrayColor().CGColor
-        //        self.shadowRadius = 5
-        //        self.shadowOffset = CGSizeMake(2, 2)
-        //        self.shadowOpacity = 1
+//                self.shadowColor = UIColor.redColor().CGColor
+//                self.shadowRadius = 5
+//                self.shadowOffset = CGSizeMake(2, 2)
+//                self.shadowOpacity = 1
         //test
         //        self.maskLayer = CALayer()
         //

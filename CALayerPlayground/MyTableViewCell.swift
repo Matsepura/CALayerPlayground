@@ -12,10 +12,9 @@ class MyTableViewCell: BaseMessageTableViewCell {
     
     let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
     let mask = CALayer()
+    var necessarySize = CGSize()
     
-    let textLayer = CATextLayer()
-    
-    let string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor arcu quis velit congue dictum."
+//    let string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor arcu quis velit congue dictum."
     
     // MARK: Setup
 
@@ -39,24 +38,29 @@ class MyTableViewCell: BaseMessageTableViewCell {
         // setup message bubble layer
         self.messageLayer.anchorPoint = CGPoint(x: 1, y: 0.5)
         self.messageLayer.backgroundColor = UIColor.lightGrayColor().CGColor
-        self.messageLayer.frame.size = self.calculateSizeOfBubbleImage()
+        self.messageLayer.frame.size = CGSize(width: self.calculateSizeOfBubbleImage().width - 20, height: self.calculateSizeOfBubbleImage().height - 10)
         
-        // add text to buuble message layer
-        self.textLayer.string = string
-        self.textLayer.fontSize = 12
-        
-        let str = self.string as NSString
-        let attr = [NSFontAttributeName:UIFont.systemFontOfSize(12)]
-//        let sz = CGSize(width: self.messageLayer.bounds.width - 24, height:90)
-        let r = str.boundingRectWithSize(CGSizeMake(215, CGFloat.max), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes:attr, context:nil)
-        print(r)
-
+//        // add text to buuble message layer
+//        let font = UIFont.systemFontOfSize(12)
+//        self.textLayer.string = string
+//        let fontName = font.fontName as NSString
+//        let cgFont = CGFontCreateWithFontName(fontName);
+//        self.textLayer.font = cgFont
+//        self.textLayer.fontSize = font.pointSize
+//
+//        let str = self.string as NSString
+//        let attr = [NSFontAttributeName:font]
+////        let sz = CGSize(width: self.messageLayer.bounds.width - 24, height:90)
+//        let r = str.boundingRectWithSize(CGSizeMake(215, CGFloat.max), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes:attr, context:nil)
+//        print(r)
+//        self.necessarySize = r.size
+////
         self.messageLayer.frame.size = self.calculateSizeOfBubbleImage()
-        textLayer.foregroundColor = UIColor.darkGrayColor().CGColor
-        textLayer.wrapped = true
-        textLayer.alignmentMode = kCAAlignmentLeft
-        textLayer.contentsScale = UIScreen.mainScreen().scale
-        self.messageLayer.addSublayer(textLayer)
+//        textLayer.foregroundColor = UIColor.darkGrayColor().CGColor
+//        textLayer.wrapped = true
+//        textLayer.alignmentMode = kCAAlignmentLeft
+//        textLayer.contentsScale = UIScreen.mainScreen().scale
+//        self.messageLayer.addSublayer(textLayer)
         
         if let bubble = UIImage(named: "rightBubbleBackground") {
             
@@ -76,12 +80,15 @@ class MyTableViewCell: BaseMessageTableViewCell {
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
         self.mask.frame = self.messageLayer.bounds
-        self.textLayer.frame = CGRect(x: self.messageLayer.bounds.origin.x + 4, y: self.messageLayer.bounds.origin.y + 4, width: self.messageLayer.bounds.width, height: self.messageLayer.bounds.height)
+        self.textLayer.frame = CGRect(x: self.messageLayer.frame.origin.x + 4, y: self.messageLayer.frame.origin.y + 4, width: self.messageLayer.frame.width, height: self.messageLayer.frame.height)
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {
         var size = CGSize()
+        size = CGSizeMake(self.necessarySize.width + 10, self.necessarySize.height + 10)
         size = CGSizeMake(120, 40)
+        let sizeUp = TextMessageLayer()
+        size = sizeUp.setupSize()
         return size
     }
     

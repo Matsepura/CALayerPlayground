@@ -14,8 +14,13 @@ class BaseMessageTableViewCell: UITableViewCell {
 
 //    private(set) var messageLayer: CALayer!
     private(set) var messageLayer: MessageLayer!
+    private(set) var textLayer: TextMessageLayer!
     
     // MARK: Setup
+    
+    class func textMessageLayerClass() -> TextMessageLayer.Type {
+        return TextMessageLayer.self
+    }
     
     class func messageLayerClass() -> MessageLayer.Type {
         return MessageLayer.self
@@ -41,6 +46,10 @@ class BaseMessageTableViewCell: UITableViewCell {
 //        self.messageLayer = self.dynamicType.messageLayerClass().init()
         self.messageLayer = self.dynamicType.messageLayerClass().init()
         self.contentView.layer.addSublayer(self.messageLayer)
-        self.messageLayer.masksToBounds = true
+        self.messageLayer.masksToBounds = false
+        
+        self.textLayer = self.dynamicType.textMessageLayerClass().init()
+        self.contentView.layer.addSublayer(self.textLayer)
+        self.textLayer.masksToBounds = true
     }
 }

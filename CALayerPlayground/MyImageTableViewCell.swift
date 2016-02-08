@@ -42,7 +42,6 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
         if let bubble = UIImage(named: "rightBubbleBackground") {
-            print("2")
             self.mask.contentsScale = bubble.scale
             self.mask.contents = bubble.CGImage
             //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
@@ -59,7 +58,7 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
-//        self.mask.frame = self.messageLayer.bounds
+        self.mask.frame = self.messageLayer.bounds
     }
     
     private func calculateSizeOfBubbleImage() -> CGSize {
