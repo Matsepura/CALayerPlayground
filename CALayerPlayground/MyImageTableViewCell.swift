@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyImageTableViewCell: BaseMessageTableViewCell {
+class MyImageTableViewCell: BaseMessageTableViewCell<MessageLayer> {
     
     // MARK: Property
 
@@ -37,27 +37,53 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
     private func setupMessageLayer() {
 
         self.messageLayer.anchorPoint = CGPoint(x: 1, y: 0.5)
-        self.messageLayer.contentsGravity = kCAGravityResizeAspectFill
-        self.messageLayer.backgroundColor = UIColor.lightGrayColor().CGColor
+        self.messageLayer.contentLayer.contentsGravity = kCAGravityResizeAspectFill
+        self.messageLayer.contentLayer.backgroundColor = UIColor.lightGrayColor().CGColor
         self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
-        if let bubble = UIImage(named: "rightBubbleBackground") {
+        if let bubble = UIImage(named: "mask") {
             self.mask.contentsScale = bubble.scale
             self.mask.contents = bubble.CGImage
+            
+            
             //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
             self.mask.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
                 y: bubbleRightCapInsets.top/bubble.size.height,
                 width: 1/bubble.size.width,
                 height: 1/bubble.size.height);
+            
+            self.mask.contents = bubble.CGImage
+            self.mask.masksToBounds = true
         }
-        self.messageLayer.masksToBounds = false
-        self.messageLayer.contents = UIImage(named: "cat")?.CGImage
+        
+        if let bubble = UIImage(named: "bubble_min") {
+            self.messageLayer.contentsScale = bubble.scale
+            self.messageLayer.contents = bubble.CGImage
+            
+            
+            //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
+            self.messageLayer.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
+                y: bubbleRightCapInsets.top/bubble.size.height,
+                width: 1/bubble.size.width,
+                height: 1/bubble.size.height);
+            
+            self.messageLayer.contents = bubble.CGImage
+            self.messageLayer.masksToBounds = false
+        }
+        
+//        self.messageLayer.contentLayer.hidden = true
+//        self.messageLayer.contentLayer.contents = UIImage(named: "cat")?.CGImage
         //// тени нету, картинка тянется по маске
-        self.messageLayer.mask = self.mask
+        self.messageLayer.contentLayer.mask = self.mask
         //// картинка квадратная, тень есть
 //        self.messageLayer.contentLayer.mask = self.mask
 //        self.messageLayer.contentLayer.mask = self.messageLayer.mask
         
+//        self.mask.shouldRasterize = true
+//        self.mask.rasterizationScale = UIScreen.mainScreen().scale
+        
+        self.mask.drawsAsynchronously = true
+
         self.messageLayer.contentLayer.masksToBounds = true
     }
     
@@ -65,10 +91,10 @@ class MyImageTableViewCell: BaseMessageTableViewCell {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: self.bounds.width - 10, y: self.bounds.height / 2)
-        self.mask.frame = self.messageLayer.bounds
+        self.mask.frame = self.messageLayer.contentLayer.bounds
     }
     
-    private func calculateSizeOfBubbleImage() -> CGSize {
+    func calculateSizeOfBubbleImage() -> CGSize {
         var size = CGSize()
         size = CGSizeMake(120, 120)
         return size

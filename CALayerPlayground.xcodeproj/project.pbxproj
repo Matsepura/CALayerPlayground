@@ -17,8 +17,10 @@
 		452D17441C638230001C4C32 /* BaseMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17431C638230001C4C32 /* BaseMessageTableViewCell.swift */; };
 		452D17461C6387E2001C4C32 /* MyImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17451C6387E2001C4C32 /* MyImageTableViewCell.swift */; };
 		452D17481C638804001C4C32 /* SenderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */; };
+		45D061281C6B231C00BBFA37 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D061271C6B231C00BBFA37 /* DatabaseModel.swift */; };
 		45FD59151C6874E60099F9F9 /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD59141C6874E60099F9F9 /* MessageLayer.swift */; };
 		45FD59171C68B4D00099F9F9 /* TextMessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD59161C68B4D00099F9F9 /* TextMessageLayer.swift */; };
+		B0BE51CB8C8F8BA6E26647D6 /* Pods_CALayerPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0EB914F80F509C0426282C /* Pods_CALayerPlayground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,12 @@
 		452D17431C638230001C4C32 /* BaseMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageTableViewCell.swift; sourceTree = "<group>"; };
 		452D17451C6387E2001C4C32 /* MyImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageTableViewCell.swift; sourceTree = "<group>"; };
 		452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderImageTableViewCell.swift; sourceTree = "<group>"; };
+		45D061271C6B231C00BBFA37 /* DatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		45FD59141C6874E60099F9F9 /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
 		45FD59161C68B4D00099F9F9 /* TextMessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessageLayer.swift; sourceTree = "<group>"; };
+		9F0D42C48CFB5CBA93BF6171 /* Pods-CALayerPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALayerPlayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		DBBB4003B682B2EB21B88300 /* Pods-CALayerPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CALayerPlayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		EC0EB914F80F509C0426282C /* Pods_CALayerPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CALayerPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BE51CB8C8F8BA6E26647D6 /* Pods_CALayerPlayground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				452D17261C634BDD001C4C32 /* CALayerPlayground */,
 				452D17251C634BDD001C4C32 /* Products */,
+				7139707A6CA53D042B38EF1E /* Pods */,
+				5FEAB211A74C99F49D3F1B2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +86,30 @@
 				452D17471C638804001C4C32 /* SenderImageTableViewCell.swift */,
 				45FD59141C6874E60099F9F9 /* MessageLayer.swift */,
 				45FD59161C68B4D00099F9F9 /* TextMessageLayer.swift */,
+				45D061271C6B231C00BBFA37 /* DatabaseModel.swift */,
 				452D172B1C634BDD001C4C32 /* Main.storyboard */,
 				452D172E1C634BDD001C4C32 /* Assets.xcassets */,
 				452D17301C634BDD001C4C32 /* LaunchScreen.storyboard */,
 				452D17331C634BDD001C4C32 /* Info.plist */,
 			);
 			path = CALayerPlayground;
+			sourceTree = "<group>";
+		};
+		5FEAB211A74C99F49D3F1B2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC0EB914F80F509C0426282C /* Pods_CALayerPlayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7139707A6CA53D042B38EF1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB4003B682B2EB21B88300 /* Pods-CALayerPlayground.debug.xcconfig */,
+				9F0D42C48CFB5CBA93BF6171 /* Pods-CALayerPlayground.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 452D17361C634BDD001C4C32 /* Build configuration list for PBXNativeTarget "CALayerPlayground" */;
 			buildPhases = (
+				2E0B918475E64095195787DE /* Check Pods Manifest.lock */,
 				452D17201C634BDD001C4C32 /* Sources */,
 				452D17211C634BDD001C4C32 /* Frameworks */,
 				452D17221C634BDD001C4C32 /* Resources */,
+				551E211BE70576FE07B6671D /* Embed Pods Frameworks */,
+				E6FC5FFB7BAD511A3502F5BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,11 +181,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E0B918475E64095195787DE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		551E211BE70576FE07B6671D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FC5FFB7BAD511A3502F5BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		452D17201C634BDD001C4C32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D061281C6B231C00BBFA37 /* DatabaseModel.swift in Sources */,
 				452D173E1C636112001C4C32 /* SenderTableViewCell.swift in Sources */,
 				45FD59171C68B4D00099F9F9 /* TextMessageLayer.swift in Sources */,
 				452D17461C6387E2001C4C32 /* MyImageTableViewCell.swift in Sources */,
@@ -275,6 +354,7 @@
 		};
 		452D17371C634BDD001C4C32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBB4003B682B2EB21B88300 /* Pods-CALayerPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALayerPlayground/Info.plist;
@@ -286,6 +366,7 @@
 		};
 		452D17381C634BDD001C4C32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F0D42C48CFB5CBA93BF6171 /* Pods-CALayerPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALayerPlayground/Info.plist;

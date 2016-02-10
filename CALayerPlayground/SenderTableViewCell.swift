@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SenderTableViewCell: BaseMessageTableViewCell {
+class SenderTableViewCell: BaseMessageTableViewCell<TextMessageLayer> {
     
-    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 0)
+    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
     let mask = CALayer()
     
     
@@ -34,12 +34,14 @@ class SenderTableViewCell: BaseMessageTableViewCell {
     
     private func setupMessagesLayer() {
         self.messageLayer.anchorPoint = CGPoint(x: 0, y: 0.5)
-        self.messageLayer.backgroundColor = UIColor.greenColor().CGColor
-        self.messageLayer.frame.size = CGSize(width: self.calculateSizeOfBubbleImage().width - 20, height: self.calculateSizeOfBubbleImage().height - 10)
+        self.messageLayer.contentLayer.backgroundColor = UIColor.greenColor().CGColor
+//        self.messageLayer.frame.size = CGSize(width: self.calculateSizeOfBubbleImage().width - 20, height: self.calculateSizeOfBubbleImage().height - 10)
 
-        self.messageLayer.frame.size = calculateSizeOfBubbleImage()
+//        self.messageLayer.frame.size = calculateSizeOfBubbleImage()
         
-        if let bubble = UIImage(named: "leftBubbleBackground") {
+        self.messageLayer.contentLayer.textInsets = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 5)
+        
+        if let bubble = UIImage(named: "rightBubbleBackground") {
             
             self.mask.contentsScale = bubble.scale
             self.mask.contents = bubble.CGImage
@@ -49,24 +51,56 @@ class SenderTableViewCell: BaseMessageTableViewCell {
                 width: 1/bubble.size.width,
                 height: 1/bubble.size.height);
         }
-        self.messageLayer.mask = self.mask
+        
+        if let bubble = UIImage(named: "bubble_min") {
+            self.messageLayer.contentsScale = bubble.scale
+            self.messageLayer.contents = bubble.CGImage
+            
+            
+            //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
+            self.messageLayer.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
+                y: bubbleRightCapInsets.top/bubble.size.height,
+                width: 1/bubble.size.width,
+                height: 1/bubble.size.height);
+            
+            self.messageLayer.contents = bubble.CGImage
+            self.messageLayer.masksToBounds = false
+        }
+        
+//        self.mask.shouldRasterize = true
+//        self.mask.rasterizationScale = UIScreen.mainScreen().scale
+        
+        self.mask.drawsAsynchronously = true
+        
+        self.messageLayer.contentLayer.mask = self.mask
+        self.messageLayer.contentLayer.masksToBounds = true
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         self.messageLayer.position = CGPoint(x: 10, y: self.bounds.height / 2)
-        self.mask.frame = self.messageLayer.bounds
-        self.textLayer.frame = CGRect(x: self.messageLayer.frame.origin.x + 14, y: self.messageLayer.frame.origin.y + 4, width: self.messageLayer.frame.width, height: self.messageLayer.frame.height)
+        self.messageLayer.setNeedsLayout()
+        self.messageLayer.layoutIfNeeded()
+        self.mask.frame = self.messageLayer.contentLayer.bounds
     }
     
-    private func calculateSizeOfBubbleImage() -> CGSize{
-        var size = CGSize()
-        size = CGSizeMake(120, 40)
-        let sizeUp = TextMessageLayer()
-        size = sizeUp.setupSize()
-        return size
+    func reload(text: String?) {
+        self.messageLayer.contentLayer.textLayer.string = text
+        var size = TextMessageLayer.setupSize(text)
+        size.width += 10
+        self.messageLayer.frame.size = size
     }
+    
+//    private func calculateSizeOfBubbleImage() -> CGSize {
+//        guard let messageLayer = self.messageLayer else {
+//            return CGSizeMake(120, 40)
+//        }
+//        
+//        let size = messageLayer.setupSize()
+//        return size
+//    }
 }
 
 

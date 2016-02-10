@@ -1,0 +1,32 @@
+PODS:
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
+  - NMessengerController (0.5.0)
+  - NTextView (0.1.0)
+
+DEPENDENCIES:
+  - FMDB
+  - NMessengerController (from `https://github.com/naithar/NMessengerController.git`)
+  - NTextView (from `https://github.com/naithar/NTextView.git`)
+
+EXTERNAL SOURCES:
+  NMessengerController:
+    :git: https://github.com/naithar/NMessengerController.git
+  NTextView:
+    :git: https://github.com/naithar/NTextView.git
+
+CHECKOUT OPTIONS:
+  NMessengerController:
+    :commit: cc9adbf52ac763102fbc8def57b5fcbe6a920bd0
+    :git: https://github.com/naithar/NMessengerController.git
+  NTextView:
+    :commit: c623186fd26212084abadc65c34cac7fe1799b68
+    :git: https://github.com/naithar/NTextView.git
+
+SPEC CHECKSUMS:
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  NMessengerController: 975bdea3f9edfd4e554d84a911f8cd9e43aaf0d6
+  NTextView: 45d3093b8285f1508e5f92f375fcd780ada9a011
+
+COCOAPODS: 0.39.0

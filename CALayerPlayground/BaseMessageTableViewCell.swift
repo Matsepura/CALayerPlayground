@@ -8,19 +8,15 @@
 
 import UIKit
 
-class BaseMessageTableViewCell: UITableViewCell {
+class BaseMessageTableViewCell<T: CALayer>: UITableViewCell {
     
     // MARK: Property
 
-    private(set) var messageLayer: MessageLayer!
-    private(set) var textLayer: TextMessageLayer!
-    
+    private(set) var messageLayer: T!
+    let testMenuItem = UIMenuItem(title: "Test", action: Selector("test:"))
+    let testMenu = UIMenuController.sharedMenuController()
     // MARK: Setup
-    
-    class func textMessageLayerClass() -> TextMessageLayer.Type {
-        return TextMessageLayer.self
-    }
-    
+
     class func messageLayerClass() -> MessageLayer.Type {
         return MessageLayer.self
     }
@@ -34,21 +30,47 @@ class BaseMessageTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier id: String?) {
         super.init(style: style, reuseIdentifier: id)
         
+        
         self.commonInit()
     }
     
     private func commonInit() {
+
+        
         self.setupMessageLayer()
     }
 
     private func setupMessageLayer() {
 //        self.messageLayer = self.dynamicType.messageLayerClass().init()
-        self.messageLayer = self.dynamicType.messageLayerClass().init()
+        self.messageLayer = T.init()
         self.contentView.layer.addSublayer(self.messageLayer)
         self.messageLayer.masksToBounds = false
-        
-        self.textLayer = self.dynamicType.textMessageLayerClass().init()
-        self.contentView.layer.addSublayer(self.textLayer)
-        self.textLayer.masksToBounds = true
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+        self.addGestureRecognizer(longPressRecognizer)
+    }
+    
+
+    // MARK: - UIMenuItem
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+        return action == "copy:"
+    }
+    
+    override func copy(sender: AnyObject?) {
+        print("pop")
+    }
+    
+    func longPressed(sender: UILongPressGestureRecognizer)
+    {
+        if sender.state == .Began {
+            print("Received longPress!")
+            self.becomeFirstResponder()
+            UIMenuController.sharedMenuController().setTargetRect(self.messageLayer.frame, inView: self)
+            UIMenuController.sharedMenuController().setMenuVisible(true, animated: true)
+        }
     }
 }

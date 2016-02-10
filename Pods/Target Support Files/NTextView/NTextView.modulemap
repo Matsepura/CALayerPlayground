@@ -1,0 +1,6 @@
+framework module NTextView {
+  umbrella header "NTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

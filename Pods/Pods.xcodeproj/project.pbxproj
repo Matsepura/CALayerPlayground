@@ -1,0 +1,1055 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B9E01E2EC18EBC4A42F27B5C315D38 /* NHmessenger.remove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 103C620E8D51EE7A004FF074CA635DFF /* NHmessenger.remove@3x.png */; };
+		032E5EC56AE948EF6329D1CB8D3F68DB /* NHPhotoMessengerCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A29C33652830F976375BB1005861D3 /* NHPhotoMessengerCollectionLayout.m */; };
+		049A0F2A60A68205EA071A66D5CF8882 /* NHmessenger.attachment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 607739D241C6D7CD134EE146BDA1031F /* NHmessenger.attachment@3x.png */; };
+		08B2B66C938A50428442EFCD35294206 /* NMessengerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A288D0B959517DA1212F00DA1A6AFBD /* NMessengerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BA2F10E14E3231E09034DA3A5ECAD9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D167D313A994E1FA2844C9492A272C5 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		14CC938EAC39389F282131D9DB12A59E /* Pods-CALayerPlayground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E509C2AD2918BDD80A21A1218D27EF3C /* Pods-CALayerPlayground-dummy.m */; };
+		14ED1AD2E9F55B58F19F5D8A1AFF68AB /* NHPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D001B0101C02B127F88350BA6C57EF92 /* NHPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		159DE0890B1201A1AD6D339ECC2D3679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1D236B498A74448BA1CDA555F843E2 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2610353C0B32B0C978BC0B97BD5327E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2CFEE93BB187EB3746196213E97B0616 /* NHmessenger.remove.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9ECABC5320051DD88F35237E2F9C5D /* NHmessenger.remove.png */; };
+		31BFEDED496C5AA090AEE8B96D62E1E2 /* NHTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 49891A6CE4061B667B95790FB9A91AD0 /* NHTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C9A5A1DD9BD4D46A5120A9C80125A0 /* NTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D94FAC81C25F796E9F194DADC79AE0 /* NTextView-dummy.m */; };
+		3914B53113D11E423FE673274B1BACB5 /* NHmessenger.remove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0ABBFA2C9AD45E53835692868634AB /* NHmessenger.remove@2x.png */; };
+		395390158FAE31BA05D09F73E137E2F5 /* NTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A64BEF8AB8693F86D5977F4A7F0C5F /* NTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C1E97E01A0855B037509C2D8C1F5A38 /* NHMessengerController.h in Headers */ = {isa = PBXBuildFile; fileRef = B8EAA42A3F0F0A088B01EE9C267D5FD3 /* NHMessengerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = A8414484D2E27D24646C6D2C91C1FA8E /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AF99DE05118636A063C4B1ACB4F94E /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42211385435164C7B8D4925861206604 /* NMessengerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB55AE558058509753B77EEC7EAE6C6 /* NMessengerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		476C7A90067024DDFA363EB8AB722251 /* NHmessenger.attachment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C370965DFA7D3C5524255EC6036B738A /* NHmessenger.attachment@2x.png */; };
+		47B5EBC6D7C6D1E47D1681C65A29AE55 /* NHPhotoMessengerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12350066AD3B91D76685EB812878627B /* NHPhotoMessengerController.m */; };
+		4C22FDBC39F668A4C13BFEB5404652FD /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A3AE278EB9BEBFE9B5BF290DCAF0A286 /* en.lproj */; };
+		665EAB08B88BC63C38251425DB337386 /* NHPhotoMessengerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C621F2F3E972527A76CF8066804F9D8 /* NHPhotoMessengerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8849BF805EBB156B9D8EF8F403B0AAF7 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E35939E0D9E9361A54851E6C08D3182 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75762A03C2310FCFBDC453DE3DFC114D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		79E6A9EF4193DF6408FD6F9FA50BEC85 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5535D2BE760918C7B70DD06F6CAD42B3 /* ru.lproj */; };
+		7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF7E31ED826615E9305BBE03E5204A /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		86BFA8DAE4B6F70790B0B51379EA4F46 /* Pods-CALayerPlayground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 533EE46D16D44F1533F478035F330C1C /* Pods-CALayerPlayground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88769A6D3EBD1400C81E59159C43DEF0 /* NHContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFE686C720150F727D5DAC60518998 /* NHContainerView.m */; };
+		8E0EFABC5CB16CC43D61B6EA700C7493 /* NMessengerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D301AD8952BD8AB89B18A21822974BE /* NMessengerController-dummy.m */; };
+		AA29F01D36496A70F3FA50D69BEBECD4 /* NHmessenger.attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = DCCF0C4095EA5063A349031B980E27FC /* NHmessenger.attachment.png */; };
+		AC9F365AC3C9D67E3E55A8DC4FDB94E9 /* NHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CEFD46AD3EC6FE81B6F71BDAB87309 /* NHTextView.m */; };
+		AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F66BEDB1B84EBE14EB89A8C34B7B6761 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEB37C21D645DACF9CCE0E5848615133 /* NHPhotoMessengerCollectionLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D321A1E3DC4406F493217FCCC7EAD9 /* NHPhotoMessengerCollectionLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71BC125367097956F9EB99E73B631C /* FMDB-dummy.m */; };
+		C09435FE0D15B8B28358288B35E65BFB /* NHPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0292F37C322C846FBDBBF86DB70DEB /* NHPhotoCollectionViewCell.m */; };
+		C78125E06B5DAA4F1AD3F31FBF1266A6 /* NHContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F053A5F1A1E9CC28E6D27EFA579F6D4 /* NHContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F1B475E28ADBF3D0864FB16F91AA49 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CCFA043D2174F6BE06F74B1346004E20 /* NTextView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DFB1AF76217A5587740C34A3E9CC104 /* NTextView.bundle */; };
+		E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDFAA696EAACDEDBABB6E14C4EF6052 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF9A86DDA96BDEEC19E1828F013F217F /* NHMessengerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39E08CFCE8675F5AA3A5FFB4B52FE81 /* NHMessengerController.m */; };
+		F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD26272DC89709E7D39720106807C2A4 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE42E24031E74D2C3719B3BBDCB86D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CBB03197F643508820965BAEB494B05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C495CF2FAB8DD7107A7D7067619CF76;
+			remoteInfo = NTextView;
+		};
+		7F0D23DB93337F5D8F2DBB9D6D1F5E9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		CC3667AC5632494653EEF0E5C766E039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C73E984DD115F269D3F2D176EB9D085;
+			remoteInfo = NMessengerController;
+		};
+		D72BF390D5F7039CEBCC71DDEC0859E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F52E7D8E57A1A347C752122B8B853845;
+			remoteInfo = "NTextView-NTextView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03AF99DE05118636A063C4B1ACB4F94E /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		05D94FAC81C25F796E9F194DADC79AE0 /* NTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTextView-dummy.m"; sourceTree = "<group>"; };
+		073779EAB12EAA0A9C3FF0EB235D5CD5 /* Pods-CALayerPlayground-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CALayerPlayground-acknowledgements.markdown"; sourceTree = "<group>"; };
+		103C620E8D51EE7A004FF074CA635DFF /* NHmessenger.remove@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NHmessenger.remove@3x.png"; path = "Pod/Assets/NHmessenger.remove@3x.png"; sourceTree = "<group>"; };
+		12350066AD3B91D76685EB812878627B /* NHPhotoMessengerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHPhotoMessengerController.m; path = Pod/Classes/NHPhotoMessengerController.m; sourceTree = "<group>"; };
+		13F1B475E28ADBF3D0864FB16F91AA49 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		2711171549558B227386114815A758F5 /* NMessengerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMessengerController.xcconfig; sourceTree = "<group>"; };
+		2A288D0B959517DA1212F00DA1A6AFBD /* NMessengerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMessengerController.h; path = Pod/Classes/NMessengerController.h; sourceTree = "<group>"; };
+		2C621F2F3E972527A76CF8066804F9D8 /* NHPhotoMessengerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHPhotoMessengerController.h; path = Pod/Classes/NHPhotoMessengerController.h; sourceTree = "<group>"; };
+		393E2C36806FDC0E0B990329A5E01CA6 /* NMessengerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NMessengerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39F32C31A9BA06E08CACA49140B034A5 /* NTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		49891A6CE4061B667B95790FB9A91AD0 /* NHTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHTextView.h; path = Pod/Classes/NHTextView.h; sourceTree = "<group>"; };
+		4BB55AE558058509753B77EEC7EAE6C6 /* NMessengerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NMessengerController-umbrella.h"; sourceTree = "<group>"; };
+		4BDFAA696EAACDEDBABB6E14C4EF6052 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		4DFB1AF76217A5587740C34A3E9CC104 /* NTextView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NTextView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EDF37DD977A7C7B11407DC8E9A37EFF /* NTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NTextView.modulemap; sourceTree = "<group>"; };
+		4F053A5F1A1E9CC28E6D27EFA579F6D4 /* NHContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHContainerView.h; path = Pod/Classes/NHContainerView.h; sourceTree = "<group>"; };
+		50A29C33652830F976375BB1005861D3 /* NHPhotoMessengerCollectionLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHPhotoMessengerCollectionLayout.m; path = Pod/Classes/NHPhotoMessengerCollectionLayout.m; sourceTree = "<group>"; };
+		533EE46D16D44F1533F478035F330C1C /* Pods-CALayerPlayground-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CALayerPlayground-umbrella.h"; sourceTree = "<group>"; };
+		542BD6E15BB59A5A95859F3CC94ED096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5535D2BE760918C7B70DD06F6CAD42B3 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = Pod/Assets/ru.lproj; sourceTree = "<group>"; };
+		5D301AD8952BD8AB89B18A21822974BE /* NMessengerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NMessengerController-dummy.m"; sourceTree = "<group>"; };
+		5F0292F37C322C846FBDBBF86DB70DEB /* NHPhotoCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHPhotoCollectionViewCell.m; path = Pod/Classes/NHPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		607739D241C6D7CD134EE146BDA1031F /* NHmessenger.attachment@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NHmessenger.attachment@3x.png"; path = "Pod/Assets/NHmessenger.attachment@3x.png"; sourceTree = "<group>"; };
+		6DEFE686C720150F727D5DAC60518998 /* NHContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHContainerView.m; path = Pod/Classes/NHContainerView.m; sourceTree = "<group>"; };
+		6EAE42E24031E74D2C3719B3BBDCB86D /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		6FD9855E28EF85161A9056C56BF6F38E /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814B120FCB91D206F37B6FF4ADC9B5D /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		7E35939E0D9E9361A54851E6C08D3182 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		81CEFD46AD3EC6FE81B6F71BDAB87309 /* NHTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHTextView.m; path = Pod/Classes/NHTextView.m; sourceTree = "<group>"; };
+		8641CF4480DAD4B3B9030F6F316FE4DE /* Pods-CALayerPlayground-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CALayerPlayground-resources.sh"; sourceTree = "<group>"; };
+		8849BF805EBB156B9D8EF8F403B0AAF7 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		88C1DA819CDF012C084E098327666F46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D167D313A994E1FA2844C9492A272C5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8F126B4CDDE95366525252652EE39C23 /* Pods-CALayerPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CALayerPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		91A64BEF8AB8693F86D5977F4A7F0C5F /* NTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTextView-umbrella.h"; sourceTree = "<group>"; };
+		92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NTextView.xcconfig; sourceTree = "<group>"; };
+		A391B893D7C8677CAF0923CC4B23EC6E /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		A3AE278EB9BEBFE9B5BF290DCAF0A286 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Pod/Assets/en.lproj; sourceTree = "<group>"; };
+		A461DDCE74521FE71DF1060CBAD55C3A /* Pods-CALayerPlayground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CALayerPlayground.modulemap"; sourceTree = "<group>"; };
+		A5E87C8C5F031BEC5138493FFDCED334 /* Pods-CALayerPlayground-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CALayerPlayground-acknowledgements.plist"; sourceTree = "<group>"; };
+		A8414484D2E27D24646C6D2C91C1FA8E /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		AA4A4AB0E2F03D9E3ED1192311D9DDC0 /* NTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTextView-prefix.pch"; sourceTree = "<group>"; };
+		B39E08CFCE8675F5AA3A5FFB4B52FE81 /* NHMessengerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NHMessengerController.m; path = Pod/Classes/NHMessengerController.m; sourceTree = "<group>"; };
+		B6BBE34E04A1624C4C047D4634619C21 /* NMessengerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NMessengerController-prefix.pch"; sourceTree = "<group>"; };
+		B8EAA42A3F0F0A088B01EE9C267D5FD3 /* NHMessengerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHMessengerController.h; path = Pod/Classes/NHMessengerController.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB9ECABC5320051DD88F35237E2F9C5D /* NHmessenger.remove.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NHmessenger.remove.png; path = Pod/Assets/NHmessenger.remove.png; sourceTree = "<group>"; };
+		C370965DFA7D3C5524255EC6036B738A /* NHmessenger.attachment@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NHmessenger.attachment@2x.png"; path = "Pod/Assets/NHmessenger.attachment@2x.png"; sourceTree = "<group>"; };
+		CCEF670B6C2B0B60BEC09FD959741390 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0ABBFA2C9AD45E53835692868634AB /* NHmessenger.remove@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NHmessenger.remove@2x.png"; path = "Pod/Assets/NHmessenger.remove@2x.png"; sourceTree = "<group>"; };
+		CD26272DC89709E7D39720106807C2A4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CDAF7E31ED826615E9305BBE03E5204A /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		D001B0101C02B127F88350BA6C57EF92 /* NHPhotoCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHPhotoCollectionViewCell.h; path = Pod/Classes/NHPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		DCCF0C4095EA5063A349031B980E27FC /* NHmessenger.attachment.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NHmessenger.attachment.png; path = Pod/Assets/NHmessenger.attachment.png; sourceTree = "<group>"; };
+		DD444F570903A798687F27DFFDF7F57E /* Pods-CALayerPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CALayerPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2CE78857EE2883E2082E7E3F8D65FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0C07286B1F2A3B071F0FE4840BCA61B /* Pods_CALayerPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CALayerPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D321A1E3DC4406F493217FCCC7EAD9 /* NHPhotoMessengerCollectionLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NHPhotoMessengerCollectionLayout.h; path = Pod/Classes/NHPhotoMessengerCollectionLayout.h; sourceTree = "<group>"; };
+		E509C2AD2918BDD80A21A1218D27EF3C /* Pods-CALayerPlayground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CALayerPlayground-dummy.m"; sourceTree = "<group>"; };
+		EF1D236B498A74448BA1CDA555F843E2 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		EF35780B7C137BA2AFCFD964A97A9FC9 /* NMessengerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NMessengerController.modulemap; sourceTree = "<group>"; };
+		F66BEDB1B84EBE14EB89A8C34B7B6761 /* FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-umbrella.h"; sourceTree = "<group>"; };
+		FAB029D75757BFAEF34F8166CAD4AE38 /* Pods-CALayerPlayground-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CALayerPlayground-frameworks.sh"; sourceTree = "<group>"; };
+		FC71BC125367097956F9EB99E73B631C /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		FD6DCDEBF4B596B63F90EA340FC58962 /* FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FMDB.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159DE0890B1201A1AD6D339ECC2D3679 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A37F242B13BB53B39B95F6A84DD0D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD076A3EC39AC58DD425702FF9EEC7A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75762A03C2310FCFBDC453DE3DFC114D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B974F20EC828ED9EE20E3D08D3CA74A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA2F10E14E3231E09034DA3A5ECAD9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92A02921B05D01C7F14C52DD0FA87E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610353C0B32B0C978BC0B97BD5327E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F76BB60A659AEFCFE01E88C250A73D1 /* NTextView */ = {
+			isa = PBXGroup;
+			children = (
+				49891A6CE4061B667B95790FB9A91AD0 /* NHTextView.h */,
+				81CEFD46AD3EC6FE81B6F71BDAB87309 /* NHTextView.m */,
+				5E8F81FF0A3CB82B6EFD5CDA500E5CF1 /* Support Files */,
+			);
+			path = NTextView;
+			sourceTree = "<group>";
+		};
+		3E35A2181B3F897D145D75BA058687EC /* NMessengerController */ = {
+			isa = PBXGroup;
+			children = (
+				4F053A5F1A1E9CC28E6D27EFA579F6D4 /* NHContainerView.h */,
+				6DEFE686C720150F727D5DAC60518998 /* NHContainerView.m */,
+				B8EAA42A3F0F0A088B01EE9C267D5FD3 /* NHMessengerController.h */,
+				B39E08CFCE8675F5AA3A5FFB4B52FE81 /* NHMessengerController.m */,
+				D001B0101C02B127F88350BA6C57EF92 /* NHPhotoCollectionViewCell.h */,
+				5F0292F37C322C846FBDBBF86DB70DEB /* NHPhotoCollectionViewCell.m */,
+				E2D321A1E3DC4406F493217FCCC7EAD9 /* NHPhotoMessengerCollectionLayout.h */,
+				50A29C33652830F976375BB1005861D3 /* NHPhotoMessengerCollectionLayout.m */,
+				2C621F2F3E972527A76CF8066804F9D8 /* NHPhotoMessengerController.h */,
+				12350066AD3B91D76685EB812878627B /* NHPhotoMessengerController.m */,
+				2A288D0B959517DA1212F00DA1A6AFBD /* NMessengerController.h */,
+				B8FC09CCA5A2C73F96C54941280E6BEC /* Resources */,
+				B58D8262709E3AD9B5CC32843E9C98FC /* Support Files */,
+			);
+			path = NMessengerController;
+			sourceTree = "<group>";
+		};
+		5E8F81FF0A3CB82B6EFD5CDA500E5CF1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88C1DA819CDF012C084E098327666F46 /* Info.plist */,
+				4EDF37DD977A7C7B11407DC8E9A37EFF /* NTextView.modulemap */,
+				92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */,
+				05D94FAC81C25F796E9F194DADC79AE0 /* NTextView-dummy.m */,
+				AA4A4AB0E2F03D9E3ED1192311D9DDC0 /* NTextView-prefix.pch */,
+				91A64BEF8AB8693F86D5977F4A7F0C5F /* NTextView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NTextView";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9278D48D8254B492C5D44769EA1A508F /* Pods */,
+				8180A8FEEBFD0CE322F0CC7B47FA72C7 /* Products */,
+				9377AE5F4D65DE53C1315FAEA7273F50 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8180A8FEEBFD0CE322F0CC7B47FA72C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FD9855E28EF85161A9056C56BF6F38E /* FMDB.framework */,
+				393E2C36806FDC0E0B990329A5E01CA6 /* NMessengerController.framework */,
+				4DFB1AF76217A5587740C34A3E9CC104 /* NTextView.bundle */,
+				39F32C31A9BA06E08CACA49140B034A5 /* NTextView.framework */,
+				E0C07286B1F2A3B071F0FE4840BCA61B /* Pods_CALayerPlayground.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EFA5ACF018956A8ECF5168444E9E745 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				03AF99DE05118636A063C4B1ACB4F94E /* FMDatabase.h */,
+				6EAE42E24031E74D2C3719B3BBDCB86D /* FMDatabase.m */,
+				7E35939E0D9E9361A54851E6C08D3182 /* FMDatabaseAdditions.h */,
+				CD26272DC89709E7D39720106807C2A4 /* FMDatabaseAdditions.m */,
+				8849BF805EBB156B9D8EF8F403B0AAF7 /* FMDatabasePool.h */,
+				13F1B475E28ADBF3D0864FB16F91AA49 /* FMDatabasePool.m */,
+				4BDFAA696EAACDEDBABB6E14C4EF6052 /* FMDatabaseQueue.h */,
+				8D167D313A994E1FA2844C9492A272C5 /* FMDatabaseQueue.m */,
+				A8414484D2E27D24646C6D2C91C1FA8E /* FMDB.h */,
+				EF1D236B498A74448BA1CDA555F843E2 /* FMResultSet.h */,
+				CDAF7E31ED826615E9305BBE03E5204A /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		905C91BAB642806869D59C2B3CEEB0FB /* Pods-CALayerPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				CCEF670B6C2B0B60BEC09FD959741390 /* Info.plist */,
+				A461DDCE74521FE71DF1060CBAD55C3A /* Pods-CALayerPlayground.modulemap */,
+				073779EAB12EAA0A9C3FF0EB235D5CD5 /* Pods-CALayerPlayground-acknowledgements.markdown */,
+				A5E87C8C5F031BEC5138493FFDCED334 /* Pods-CALayerPlayground-acknowledgements.plist */,
+				E509C2AD2918BDD80A21A1218D27EF3C /* Pods-CALayerPlayground-dummy.m */,
+				FAB029D75757BFAEF34F8166CAD4AE38 /* Pods-CALayerPlayground-frameworks.sh */,
+				8641CF4480DAD4B3B9030F6F316FE4DE /* Pods-CALayerPlayground-resources.sh */,
+				533EE46D16D44F1533F478035F330C1C /* Pods-CALayerPlayground-umbrella.h */,
+				DD444F570903A798687F27DFFDF7F57E /* Pods-CALayerPlayground.debug.xcconfig */,
+				8F126B4CDDE95366525252652EE39C23 /* Pods-CALayerPlayground.release.xcconfig */,
+			);
+			name = "Pods-CALayerPlayground";
+			path = "Target Support Files/Pods-CALayerPlayground";
+			sourceTree = "<group>";
+		};
+		9278D48D8254B492C5D44769EA1A508F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F7304013EAD6EFA8AD93B0B196830 /* FMDB */,
+				3E35A2181B3F897D145D75BA058687EC /* NMessengerController */,
+				0F76BB60A659AEFCFE01E88C250A73D1 /* NTextView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9377AE5F4D65DE53C1315FAEA7273F50 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				905C91BAB642806869D59C2B3CEEB0FB /* Pods-CALayerPlayground */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B58D8262709E3AD9B5CC32843E9C98FC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF2CE78857EE2883E2082E7E3F8D65FA /* Info.plist */,
+				EF35780B7C137BA2AFCFD964A97A9FC9 /* NMessengerController.modulemap */,
+				2711171549558B227386114815A758F5 /* NMessengerController.xcconfig */,
+				5D301AD8952BD8AB89B18A21822974BE /* NMessengerController-dummy.m */,
+				B6BBE34E04A1624C4C047D4634619C21 /* NMessengerController-prefix.pch */,
+				4BB55AE558058509753B77EEC7EAE6C6 /* NMessengerController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NMessengerController";
+			sourceTree = "<group>";
+		};
+		B8FC09CCA5A2C73F96C54941280E6BEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3AE278EB9BEBFE9B5BF290DCAF0A286 /* en.lproj */,
+				DCCF0C4095EA5063A349031B980E27FC /* NHmessenger.attachment.png */,
+				C370965DFA7D3C5524255EC6036B738A /* NHmessenger.attachment@2x.png */,
+				607739D241C6D7CD134EE146BDA1031F /* NHmessenger.attachment@3x.png */,
+				BB9ECABC5320051DD88F35237E2F9C5D /* NHmessenger.remove.png */,
+				CD0ABBFA2C9AD45E53835692868634AB /* NHmessenger.remove@2x.png */,
+				103C620E8D51EE7A004FF074CA635DFF /* NHmessenger.remove@3x.png */,
+				5535D2BE760918C7B70DD06F6CAD42B3 /* ru.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CD1F7304013EAD6EFA8AD93B0B196830 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				8EFA5ACF018956A8ECF5168444E9E745 /* standard */,
+				D2578DCC69C32AD0D8ADC59CBBC4B3DA /* Support Files */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		D2578DCC69C32AD0D8ADC59CBBC4B3DA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD6DCDEBF4B596B63F90EA340FC58962 /* FMDB.modulemap */,
+				A391B893D7C8677CAF0923CC4B23EC6E /* FMDB.xcconfig */,
+				FC71BC125367097956F9EB99E73B631C /* FMDB-dummy.m */,
+				7814B120FCB91D206F37B6FF4ADC9B5D /* FMDB-prefix.pch */,
+				F66BEDB1B84EBE14EB89A8C34B7B6761 /* FMDB-umbrella.h */,
+				542BD6E15BB59A5A95859F3CC94ED096 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		449C2937855B19241CC688CE48DAD7DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78125E06B5DAA4F1AD3F31FBF1266A6 /* NHContainerView.h in Headers */,
+				3C1E97E01A0855B037509C2D8C1F5A38 /* NHMessengerController.h in Headers */,
+				14ED1AD2E9F55B58F19F5D8A1AFF68AB /* NHPhotoCollectionViewCell.h in Headers */,
+				AEB37C21D645DACF9CCE0E5848615133 /* NHPhotoMessengerCollectionLayout.h in Headers */,
+				665EAB08B88BC63C38251425DB337386 /* NHPhotoMessengerController.h in Headers */,
+				42211385435164C7B8D4925861206604 /* NMessengerController-umbrella.h in Headers */,
+				08B2B66C938A50428442EFCD35294206 /* NMessengerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5164FC4E93BFA95ECE44353151694C91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86BFA8DAE4B6F70790B0B51379EA4F46 /* Pods-CALayerPlayground-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */,
+				74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */,
+				6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */,
+				E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */,
+				AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */,
+				3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */,
+				183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C3CA78C2F31DE4F10BBBB63063F0BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BFEDED496C5AA090AEE8B96D62E1E2 /* NHTextView.h in Headers */,
+				395390158FAE31BA05D09F73E137E2F5 /* NTextView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AD9B734EB370BC1CB4F6F55CB4A1F5A /* Pods-CALayerPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AC860D0E4CAF103360956408A155199 /* Build configuration list for PBXNativeTarget "Pods-CALayerPlayground" */;
+			buildPhases = (
+				D3490D8BB212296D7416640F10A38287 /* Sources */,
+				B974F20EC828ED9EE20E3D08D3CA74A8 /* Frameworks */,
+				5164FC4E93BFA95ECE44353151694C91 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07871CE8450BCB4AE0CB8226E3860714 /* PBXTargetDependency */,
+				C7808E5075599AC374A8E94E1115E7EE /* PBXTargetDependency */,
+				F7D00CCC91D522B71A67576BEBC3F1D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-CALayerPlayground";
+			productName = "Pods-CALayerPlayground";
+			productReference = E0C07286B1F2A3B071F0FE4840BCA61B /* Pods_CALayerPlayground.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				6F019F4B57C689E3B448935B617CFF76 /* Sources */,
+				07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */,
+				A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMDB;
+			productName = FMDB;
+			productReference = 6FD9855E28EF85161A9056C56BF6F38E /* FMDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C495CF2FAB8DD7107A7D7067619CF76 /* NTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 772713DD1E77EEEBBFBD5A0B76269CF4 /* Build configuration list for PBXNativeTarget "NTextView" */;
+			buildPhases = (
+				C0452B6A7DB2ACFBFF750C600ED1FBB2 /* Sources */,
+				AD076A3EC39AC58DD425702FF9EEC7A9 /* Frameworks */,
+				6133DC1F37FDDBC57E31CE2A3C0B2D77 /* Resources */,
+				C1C3CA78C2F31DE4F10BBBB63063F0BD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47D2185444103E13A2184857A1298C52 /* PBXTargetDependency */,
+			);
+			name = NTextView;
+			productName = NTextView;
+			productReference = 39F32C31A9BA06E08CACA49140B034A5 /* NTextView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C73E984DD115F269D3F2D176EB9D085 /* NMessengerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F517E5FEC36F84D9BFF985C86DC25536 /* Build configuration list for PBXNativeTarget "NMessengerController" */;
+			buildPhases = (
+				FA7226E4BAFB328EDCB15B9BA62A8728 /* Sources */,
+				E92A02921B05D01C7F14C52DD0FA87E0 /* Frameworks */,
+				449C2937855B19241CC688CE48DAD7DF /* Headers */,
+				7DF0A87EA420090CB002EDEE2A4F9893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NMessengerController;
+			productName = NMessengerController;
+			productReference = 393E2C36806FDC0E0B990329A5E01CA6 /* NMessengerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F52E7D8E57A1A347C752122B8B853845 /* NTextView-NTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE0E6AF32C71068E5AD49E1E438D89D /* Build configuration list for PBXNativeTarget "NTextView-NTextView" */;
+			buildPhases = (
+				93A307EA3A8C5AF0E3437773FEFF2F7B /* Sources */,
+				70A37F242B13BB53B39B95F6A84DD0D5 /* Frameworks */,
+				314B6D73039E1364B70669F40D5BA394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NTextView-NTextView";
+			productName = "NTextView-NTextView";
+			productReference = 4DFB1AF76217A5587740C34A3E9CC104 /* NTextView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8180A8FEEBFD0CE322F0CC7B47FA72C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */,
+				9C73E984DD115F269D3F2D176EB9D085 /* NMessengerController */,
+				9C495CF2FAB8DD7107A7D7067619CF76 /* NTextView */,
+				F52E7D8E57A1A347C752122B8B853845 /* NTextView-NTextView */,
+				0AD9B734EB370BC1CB4F6F55CB4A1F5A /* Pods-CALayerPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		314B6D73039E1364B70669F40D5BA394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6133DC1F37FDDBC57E31CE2A3C0B2D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCFA043D2174F6BE06F74B1346004E20 /* NTextView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF0A87EA420090CB002EDEE2A4F9893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C22FDBC39F668A4C13BFEB5404652FD /* en.lproj in Resources */,
+				AA29F01D36496A70F3FA50D69BEBECD4 /* NHmessenger.attachment.png in Resources */,
+				476C7A90067024DDFA363EB8AB722251 /* NHmessenger.attachment@2x.png in Resources */,
+				049A0F2A60A68205EA071A66D5CF8882 /* NHmessenger.attachment@3x.png in Resources */,
+				2CFEE93BB187EB3746196213E97B0616 /* NHmessenger.remove.png in Resources */,
+				3914B53113D11E423FE673274B1BACB5 /* NHmessenger.remove@2x.png in Resources */,
+				01B9E01E2EC18EBC4A42F27B5C315D38 /* NHmessenger.remove@3x.png in Resources */,
+				79E6A9EF4193DF6408FD6F9FA50BEC85 /* ru.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F019F4B57C689E3B448935B617CFF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */,
+				F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */,
+				C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */,
+				0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */,
+				BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */,
+				7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93A307EA3A8C5AF0E3437773FEFF2F7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0452B6A7DB2ACFBFF750C600ED1FBB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9F365AC3C9D67E3E55A8DC4FDB94E9 /* NHTextView.m in Sources */,
+				31C9A5A1DD9BD4D46A5120A9C80125A0 /* NTextView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3490D8BB212296D7416640F10A38287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CC938EAC39389F282131D9DB12A59E /* Pods-CALayerPlayground-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7226E4BAFB328EDCB15B9BA62A8728 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88769A6D3EBD1400C81E59159C43DEF0 /* NHContainerView.m in Sources */,
+				EF9A86DDA96BDEEC19E1828F013F217F /* NHMessengerController.m in Sources */,
+				C09435FE0D15B8B28358288B35E65BFB /* NHPhotoCollectionViewCell.m in Sources */,
+				032E5EC56AE948EF6329D1CB8D3F68DB /* NHPhotoMessengerCollectionLayout.m in Sources */,
+				47B5EBC6D7C6D1E47D1681C65A29AE55 /* NHPhotoMessengerController.m in Sources */,
+				8E0EFABC5CB16CC43D61B6EA700C7493 /* NMessengerController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07871CE8450BCB4AE0CB8226E3860714 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = 7F0D23DB93337F5D8F2DBB9D6D1F5E9F /* PBXContainerItemProxy */;
+		};
+		47D2185444103E13A2184857A1298C52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "NTextView-NTextView";
+			target = F52E7D8E57A1A347C752122B8B853845 /* NTextView-NTextView */;
+			targetProxy = D72BF390D5F7039CEBCC71DDEC0859E9 /* PBXContainerItemProxy */;
+		};
+		C7808E5075599AC374A8E94E1115E7EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMessengerController;
+			target = 9C73E984DD115F269D3F2D176EB9D085 /* NMessengerController */;
+			targetProxy = CC3667AC5632494653EEF0E5C766E039 /* PBXContainerItemProxy */;
+		};
+		F7D00CCC91D522B71A67576BEBC3F1D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NTextView;
+			target = 9C495CF2FAB8DD7107A7D7067619CF76 /* NTextView */;
+			targetProxy = 6CBB03197F643508820965BAEB494B05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		217FB1142FCA848215F5BA0FCCCABD2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2711171549558B227386114815A758F5 /* NMessengerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NMessengerController/NMessengerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NMessengerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NMessengerController/NMessengerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NMessengerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		423722D2AFC9B98052E472398CF07989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F126B4CDDE95366525252652EE39C23 /* Pods-CALayerPlayground.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CALayerPlayground/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CALayerPlayground;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A75ABFA8B4FCA714E0F419D991D75F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NTextView/NTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NTextView/NTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8434B3724F597A8687890E80C886AA2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2711171549558B227386114815A758F5 /* NMessengerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NMessengerController/NMessengerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NMessengerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NMessengerController/NMessengerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NMessengerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8DBB9A5D8CBDE2968087630F44B0E9C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD444F570903A798687F27DFFDF7F57E /* Pods-CALayerPlayground.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CALayerPlayground/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CALayerPlayground/Pods-CALayerPlayground.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_CALayerPlayground;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94E024FED54F530DCA09629BA4747BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = NTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B29749EB91C55E64A3D84949391C8B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A391B893D7C8677CAF0923CC4B23EC6E /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDC6450026B721481A79184268428CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = NTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6DB943037D0A56FD870041FBBCB663C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A391B893D7C8677CAF0923CC4B23EC6E /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D8A4F8E1A0D18E89CD456DC1B4B5724E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C2AFDC24D56DA451E00756B5E38BEF /* NTextView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NTextView/NTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NTextView/NTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CE0E6AF32C71068E5AD49E1E438D89D /* Build configuration list for PBXNativeTarget "NTextView-NTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC6450026B721481A79184268428CAA /* Debug */,
+				94E024FED54F530DCA09629BA4747BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AC860D0E4CAF103360956408A155199 /* Build configuration list for PBXNativeTarget "Pods-CALayerPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBB9A5D8CBDE2968087630F44B0E9C6 /* Debug */,
+				423722D2AFC9B98052E472398CF07989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		772713DD1E77EEEBBFBD5A0B76269CF4 /* Build configuration list for PBXNativeTarget "NTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A4F8E1A0D18E89CD456DC1B4B5724E /* Debug */,
+				5A75ABFA8B4FCA714E0F419D991D75F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6DB943037D0A56FD870041FBBCB663C /* Debug */,
+				B29749EB91C55E64A3D84949391C8B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F517E5FEC36F84D9BFF985C86DC25536 /* Build configuration list for PBXNativeTarget "NMessengerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				217FB1142FCA848215F5BA0FCCCABD2B /* Debug */,
+				8434B3724F597A8687890E80C886AA2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

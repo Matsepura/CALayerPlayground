@@ -8,13 +8,63 @@
 
 import UIKit
 
-class TextMessageLayer: CATextLayer {
+class TextContentLayer: CALayer {
+    private(set) var textLayer: CATextLayer!
+    
+    
+    var textInsets: UIEdgeInsets = UIEdgeInsetsZero {
+        didSet {
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.commonInit()
+    }
+    
+    override init(layer: AnyObject) {
+        super.init(layer: layer)
+        
+        self.commonInit()
+    }
+    
+    override init() {
+        super.init()
+        
+        self.commonInit()
+    }
+    
+    private func commonInit() {
+        self.textLayer = CATextLayer()
+        self.addSublayer(self.textLayer)
+        
+//        self.shouldRasterize = true
+//        self.rasterizationScale = UIScreen.mainScreen().scale
+//        self.drawsAsynchronously = true
+        
+//        self.textLayer.shouldRasterize = true
+//        self.textLayer.rasterizationScale = UIScreen.mainScreen().scale
+//        self.textLayer.drawsAsynchronously = true
+    }
+    
+    override func layoutSublayers() {
+        super.layoutSublayers()
+        
+        self.textLayer.frame = UIEdgeInsetsInsetRect(self.bounds, self.textInsets)
+    }
+}
+
+class TextMessageLayer: BaseMessageLayer<TextContentLayer> {
     
     // MARK: - Property
     
-    private(set) var textInMessageLayer: CATextLayer!
+//    override class func contentLayerClass() -> CALayer.Type {
+//        return CATextLayer.self
+//    }
     
-        var necessarySize = CGSize()
         let stringTest = "For the world you may be just one person, but for one person you may be the whole world!"
 
     // MARK: - Setup
@@ -31,53 +81,70 @@ class TextMessageLayer: CATextLayer {
         self.commonInit()
     }
     
-    required override init() {
+    required init() {
         super.init()
         
         self.commonInit()
     }
     
     private func commonInit() {
-        self.textInMessageLayer = CATextLayer()
-                addTextToLayer()
-        self.addSublayer(self.textInMessageLayer)
-
-    }
-    
-    override func layoutSublayers() {
-        super.layoutSublayers()
-        self.textInMessageLayer.frame.size = CGSizeMake(self.necessarySize.width + 10, self.necessarySize.height + 10)
-//        self.textInMessageLayer.frame = self.bounds
+        self.addTextToLayer()
     }
 
     private func addTextToLayer() {
         
+        guard let contentLayer = self.contentLayer else { return }
         let font = UIFont.systemFontOfSize(12)
-        self.textInMessageLayer.string = stringTest
+        contentLayer.textLayer.string = stringTest
+        
         let fontName = font.fontName as NSString
         let cgFont = CGFontCreateWithFontName(fontName);
-        self.textInMessageLayer.font = cgFont
-        self.textInMessageLayer.fontSize = font.pointSize
+        contentLayer.textLayer.font = cgFont
+        contentLayer.textLayer.fontSize = font.pointSize
         
-        let str = self.stringTest as NSString
-        let attr = [NSFontAttributeName:font]
+//        let str = self.stringTest as NSString
+//        let attr = [NSFontAttributeName:font]
+//        //        let sz = CGSize(width: self.messageLayer.bounds.width - 24, height:90)
+//        let r = str.boundingRectWithSize(CGSize(width: 215, height: CGFloat.max), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes:attr, context:nil)
+//        print(r)
+//        
+        contentLayer.textLayer.foregroundColor = UIColor.darkGrayColor().CGColor
+        contentLayer.textLayer.wrapped = true
+        contentLayer.textLayer.alignmentMode = kCAAlignmentLeft
+        contentLayer.textLayer.contentsScale = UIScreen.mainScreen().scale
+        
+//        self.opaque = true
+//        self.contentLayer.opaque = true
+//        self.contentLayer.textLayer.opaque = true
+//        self.contentLayer.textLayer.backgroundColor = UIColor.redColor().CGColor
+    }
+
+    
+    class func setupSize(text: String?) -> CGSize {
+        guard let text = text else { return .zero }
+        let font = UIFont.systemFontOfSize(12)
+        let str = text as NSString
+        let attr = [
+            NSFontAttributeName : font
+        ]
         //        let sz = CGSize(width: self.messageLayer.bounds.width - 24, height:90)
         let r = str.boundingRectWithSize(CGSizeMake(215, CGFloat.max), options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes:attr, context:nil)
-        print(r)
-        self.necessarySize = r.size
         
-        textInMessageLayer.foregroundColor = UIColor.darkGrayColor().CGColor
-        textInMessageLayer.wrapped = true
-        textInMessageLayer.alignmentMode = kCAAlignmentLeft
-        textInMessageLayer.contentsScale = UIScreen.mainScreen().scale
-        
-    }
-    
-    func setupSize() -> CGSize {
-        var size = self.necessarySize
-        size.height += 10
-        size.width += 10
+        var size = r.size
+        size.height += 19
+        size.width += 18
         
         return size
+    }
+    
+    override func layoutSublayers() {
+        super.layoutSublayers()
+        
+        var frame = self.bounds
+        frame.origin.x += 4.5
+        frame.size.width -= 8
+        frame.size.height -= 9
+        
+        self.contentLayer.frame = frame
     }
 }

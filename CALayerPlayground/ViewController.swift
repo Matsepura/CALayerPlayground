@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import NTextView
+import NMessengerController
+
+func rgb(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
+    return rgba(r, g: g, b: b, a: 1.0)
+}
+
+func rgba(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+    return UIColor(
+        red: r / 255.0,
+        green: g / 255.0,
+        blue: b / 255.0,
+        alpha: a)
+}
 
 class ViewController: UIViewController {
-
+    
     // MARK: - Property
     
     @IBOutlet weak var viewForLayer: UIView!
@@ -18,17 +32,39 @@ class ViewController: UIViewController {
     var tableView: UITableView = UITableView()
     var items: [String] = ["Hello", "world", "!"]
     
+    var messengerController: NHPhotoMessengerController!
+    var messengerLoadingView: NHPhotoMessengerController!
+    
+    let dataBaseManager = DatabaseModel()
+    lazy var messages: [(id: String, height: CGFloat)] = []
+    
     // MARK: - Setup
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setup()
+    }
+    
+    func setup() {
+        
         self.setupTableView()
+        self.setupMessengerController()
+        
+        self.dataBaseManager.fileURL = self.dataBaseManager.getDatabaseURL()
+        
+        self.dataBaseManager.cleanDatabase()
+        self.dataBaseManager.createReaderWriter()
+        self.dataBaseManager.createDatabase()
+        
+        self.messages = self.dataBaseManager.readDatabase(nil, limit: 40)
+        self.tableView.setContentOffset(CGPointMake(0, CGFloat.max), animated: true)
     }
     
     func setupTableView() {
         
-        tableView.frame = CGRectMake(0, 0, 320, 568)
+        self.tableView.frame = self.view.bounds
+        //        self.tableView.autoresizingMask = UIViewAutoresizing.
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
@@ -40,16 +76,104 @@ class ViewController: UIViewController {
         tableView.registerClass(SenderImageTableViewCell.self, forCellReuseIdentifier: "senderImageCell")
         
         self.view.addSubview(tableView)
-//        self.tableView.setContentOffset(CGPointMake(0, CGFloat.max), animated: false)
+        //        self.tableView.setContentOffset(CGPointMake(0, CGFloat.max), animated: false)
     }
-
+    
+    func setupMessengerController() {
+        
+        self.messengerController = NHPhotoMessengerController(scrollView: self.tableView, andSuperview: self.view, andTextInputClass: NHTextView.self)
+        
+        self.messengerController.delegate = self
+        self.messengerController.photoDelegate = self
+        self.messengerController.separatorView.backgroundColor = UIColor.blackColor()
+        
+        self.messengerController.attachmentButton.addTarget(self, action: Selector("addPhoto:"), forControlEvents: .TouchUpInside)
+        
+        self.messengerController.sendButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        self.messengerController.sendButton.setTitleColor(UIColor.redColor(), forState: .Disabled)
+        
+        //!!!!!!!!!!!
+        //        self.messengerController.sendButton.setTitle(localize("conversation.placeholder", table: "ConversationLocalization"), forState: .Normal)
+        
+        self.messengerController.sendButton.backgroundColor = rgb(233, g: 238, b: 239)
+        //        self.messengerController.sendButton.titleLabel!.font = UIFont.s_Body_P1()
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.placeholder = NSLocalizedString("conversation.placeholder", tableName: "ConversationLocalization", comment: "comment")
+        (self.messengerController.textInputResponder as? NHTextView)?.textColor = UIColor.darkGrayColor()
+        //        (self.messengerController.textInputResponder as? NHTextView)?.font = UIFont.s_Body_P2()
+        (self.messengerController.textInputResponder as? NHTextView)?.keyboardType = .Default
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.useHeightConstraint = true
+        (self.messengerController.textInputResponder as? NHTextView)?.isGrowingTextView = true
+        (self.messengerController.textInputResponder as? NHTextView)?.numberOfLines = 4
+        (self.messengerController.textInputResponder as? NHTextView)?.spellCheckingType = .Yes
+        (self.messengerController.textInputResponder as? NHTextView)?.backgroundColor = UIColor.whiteColor()
+        (self.messengerController.textInputResponder as? NHTextView)?.tintColor = UIColor.darkGrayColor()
+        
+        self.messengerController.container.backgroundColor = rgb(233, g: 238, b: 239)
+        self.messengerController.sendButton.backgroundColor = rgb(233, g: 238, b: 239)
+        self.messengerController.attachmentButton.backgroundColor = rgb(233, g: 238, b: 239)
+        self.messengerController.photoCollectionView.backgroundColor = rgb(233, g: 238, b: 239)
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.findLinks = true
+        (self.messengerController.textInputResponder as? NHTextView)?.findHashtags = true
+        (self.messengerController.textInputResponder as? NHTextView)?.findMentions = true
+        
+        var textInsets = (self.messengerController.textInputResponder as? NHTextView)?.textContainerInset
+        textInsets?.left = 5
+        textInsets?.right = 5
+        (self.messengerController.textInputResponder as? NHTextView)?.textContainerInset = textInsets!
+        //        (self.messengerController.textInputResponder as? NHTextView)?.mentionAttributes = [NSFontAttributeName : UIFont.s_Body_P2(), NSForegroundColorAttributeName : UIColor._blue()]
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.hashtagAttributes = [NSForegroundColorAttributeName : UIColor.blueColor()]
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.linkAttributes = [NSForegroundColorAttributeName : UIColor.blueColor(), NSUnderlineStyleAttributeName : "NSUnderlineStyleSingle"]
+        
+        self.messengerController.updateMessengerView()
+        (self.messengerController.textInputResponder as? NHTextView)?.layer.cornerRadius = ((self.messengerController.textInputResponder as? NHTextView)?.bounds.size.height)! / 2
+        
+        (self.messengerController.textInputResponder as? NHTextView)?.layer.borderColor = UIColor.lightGrayColor().CGColor
+        (self.messengerController.textInputResponder as? NHTextView)?.layer.borderWidth = 1
+        
+        self.messengerController.updateMessengerView()
+    }
+    
+    func addPhoto(button: UIButton) {
+        
+        if self.messengerController.imageArray.count < 10 {
+            self.addPhotoToMessage()
+        } else {
+            UIView.animateWithDuration(0.25) {
+                self.messengerController.photoCollectionView.alpha = 0.5
+            }
+            
+            UIView.animateWithDuration(0.25, animations: {
+                self.messengerController.photoCollectionView.alpha = 0.5
+                }, completion: { _ in
+                    UIView.animateWithDuration(0.25) {
+                        self.messengerController.photoCollectionView.alpha = 1
+                    }
+            })
+        }
+    }
+    
+    func addPhotoToMessage() {
+        print("addPhotoToMessage")
+        
+    }
+    
+    func test() {
+        print("test")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 
-    // MARK: - Table view data source
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -60,29 +184,42 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 20
+        return self.messages.count
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        UIMenuController.sharedMenuController().setMenuVisible(false, animated: false)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        let sizeUp = TextMessageLayer()
-        var height = sizeUp.setupSize().height + 10
-
-//        var height: CGFloat = 50
-
-        // увеличиваем размер ячейки под картинку
+        let index = indexPath.row
+        let value = self.messages[index]
+        var height: CGFloat = value.height
+        
+        if height > 0 {
+            return height
+        }
+        
         if indexPath.row == 7 {
             height = 130
         } else if indexPath.row == 2 {
             height = 130
+        } else {
+            let textInCell = self.dataBaseManager.getMessageFromId(value.id) ?? ""
+            let sizeUp = TextMessageLayer.setupSize(textInCell)
+            height = sizeUp.height + 10
         }
+        
+        self.messages[index].height = height
         return height
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let textInCell = self.dataBaseManager.getMessageFromId(self.messages[indexPath.row])
         
-        let cell: UITableViewCell 
-        
+        let cell: UITableViewCell
+        //
         switch indexPath.row {
         case 2:
             cell = tableView.dequeueReusableCellWithIdentifier("senderImageCell", forIndexPath: indexPath)
@@ -90,22 +227,88 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCellWithIdentifier("myImageCell", forIndexPath: indexPath)
         case let i where i % 2 == 0:
             cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath)
+            
+//            (cell as? SenderTableViewCell)?.messageLayer.contentLayer.textLayer.string = textInCell
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+            
+//            (cell as? MyTableViewCell)?.messageLayer.contentLayer.textLayer.string = textInCell
         }
         cell.selectionStyle = .None
+        //
+        //
+        //
+        //        switch (indexPath.row, textInCell) {
+        //
+        //        case (let i, let textForImage) where i % 2 == 0 && textForImage == "message_text-196"
+        //            || i % 2 == 0 && textForImage == "message_text-191":
+        //
+        //            //            self.tableView.layoutIfNeeded()
+        //            cell = tableView.dequeueReusableCellWithIdentifier("myImageCell", forIndexPath: indexPath)
+        ////            (cell as? MyImageTableViewCell)?.myImageView.backgroundColor = UIColor.lightGrayColor()
+        //
+        //        case (let i, _) where i % 2 == 0:
+        //
+        //            cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        ////            cell.myMessageTextLabel.text = textInCell
+        //
+        //        case (let i, let textForImage) where i % 2 != 0 && textForImage == "message_text-196"
+        //            || i % 2 != 0 && textForImage == "message_text-191":
+        //
+        //            /*
+        //            тут я вывожу картинку и выдает такую хрень
+        //            Warning once only:
+        //            Detected a case where constraints ambiguously suggest a height
+        //            of zero for a tableview cell's content view. We're considering
+        //            the collapse unintentional and using standard height instead.
+        //            saveToDataBase
+        //            */
+        //
+        //            cell = tableView.dequeueReusableCellWithIdentifier("senderImageCell", forIndexPath: indexPath)
+        ////            cell.senderImageView.backgroundColor = UIColor.lightGrayColor()
+        //
+        //        case (let i, _) where i % 2 != 0:
+        //
+        //            cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath)
+        ////            cell.senderMessageTextLabel.text = textInCell
+        //
+        //        default:
+        //            cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        ////            cell.myMessageTextLabel.text = "error in ''tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell'' !"
+        //        }
+        
         return cell
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if let cell = cell as? MyTableViewCell {
-//        }
+        //        if let cell = cell as? MyTableViewCell {
+        //        }
+        
+        let value = self.messages[indexPath.row]
+        let textInCell = self.dataBaseManager.getMessageFromId(value.id)
+        
+        if let cell = cell as? MyTableViewCell {
+            cell.reload(textInCell)
+        } else if let cell = cell as? SenderTableViewCell {
+            cell.reload(textInCell)
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell number \(indexPath.row)!")
     }
     
+}
+
+// MARK: - NHMessengerControllerDelegate, NHPhotoMessengerControllerDelegate
+
+extension ViewController: NHMessengerControllerDelegate, NHPhotoMessengerControllerDelegate {
     
+    
+    func photoMessenger(messenger: NHPhotoMessengerController!, didSendPhotos array: [AnyObject]!) {
+        (messenger.textInputResponder as? NHTextView)?.text = nil
+        test()
+    }
     
 }
+

@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MessageLayer: CALayer {
+typealias MessageLayer = BaseMessageLayer<CALayer>
+
+class BaseMessageLayer<T: CALayer>: CALayer {
     
     // MARK: - Property
     
-    private(set) var contentLayer: CALayer!
+    private(set) var contentLayer: T!
     //test
     //    private(set) var maskLayer: CALayer!
     //    let bubbleRightCapInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 0, right: 0)
@@ -20,6 +22,10 @@ class MessageLayer: CALayer {
     //test
     
     // MARK: - Setup
+    
+//    class func contentLayerClass() -> CALayer.Type {
+//        return CALayer.self
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,40 +46,35 @@ class MessageLayer: CALayer {
     }
     
     private func commonInit() {
-        self.contentLayer = CALayer()
+        self.contentLayer = T.init()
         self.addSublayer(self.contentLayer)
+        
+        self.backgroundColor = UIColor.clearColor().CGColor
+        self.masksToBounds = false
 
-        self.shadowColor = UIColor.redColor().CGColor
-        self.shadowRadius = 5
-        self.shadowOffset = CGSizeMake(2, 2)
-        self.shadowOpacity = 1
-        //test
-        //        self.maskLayer = CALayer()
-        //
-        //        if let bubble = UIImage(named: "rightBubbleBackground") {
-        //
-        //            self.maskLayer.contentsScale = bubble.scale
-        //            self.maskLayer.contents = bubble.CGImage
-        //            //contentCenter defines stretchable image portion. values from 0 to 1. requires use of points (for iPhone5 - pixel = points / 2.).
-        //            self.maskLayer.contentsCenter = CGRect(x: bubbleRightCapInsets.left/bubble.size.width,
-        //                y: bubbleRightCapInsets.top/bubble.size.height,
-        //                width: 1/bubble.size.width,
-        //                height: 1/bubble.size.height)
-        //            self.maskLayer.shadowColor = UIColor.blackColor().CGColor;
-        //            self.maskLayer.shadowRadius = 5
-        //            self.maskLayer.shadowOffset = CGSizeMake(0, 3);
-        //            self.maskLayer.shadowOpacity = 1
-        //        }
-        //        self.mask = self.maskLayer
-        //
-        //
-        //test
+//        self.shadowColor = UIColor.redColor().CGColor
+//        self.shadowRadius = 2.5
+//        self.shadowOffset = CGSizeMake(1, 2)
+//        self.shadowOpacity = 0.25
+        
+//        self.shouldRasterize = true
+//        self.rasterizationScale = UIScreen.mainScreen().scale
+        self.drawsAsynchronously = true
+        
+        self.contentLayer.opaque = true
+        
+        self.contentLayer.drawsAsynchronously = true
     }
     
     override func layoutSublayers() {
         super.layoutSublayers()
         
-        self.contentLayer.frame = self.bounds
+        var frame = self.bounds
+        frame.origin.x += 4.5
+        frame.size.width -= 8
+        frame.size.height -= 9
+
+        self.contentLayer.frame = frame
         //test
         //        self.maskLayer.frame = self.bounds
         //test
